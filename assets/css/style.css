@@ -1,0 +1,67 @@
+/* ============ BASE ============ */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4ec);
+  color: #4c3a4c;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 100px;
+  flex-grow: 1;
+  /* Animation générale de fondu à l'entrée */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ TYPOGRAPHIE ============ */
+h1, h2, h3, .user-greet, .logo-text {
+  font-family: 'Edu NSW ACT Cursive', cursive !important;
+}
+
+/* ============ BOUTONS GLOBAUX ============ */
+.btn {
+  background-color: #d46a92;
+  color: white;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 106, 146, 0.3);
+  border: 2px solid #d46a92;
+}
+
+.btn:hover {
+  background-color: #a75d67;
+  border-color: #a75d67;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 106, 146, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #d46a92;
+  color: #d46a92;
+}
+
+.btn-secondary:hover {
+  background: #d46a92;
+  color: white;
+}

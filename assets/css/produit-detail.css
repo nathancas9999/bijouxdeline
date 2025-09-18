@@ -1,0 +1,138 @@
+/* Styles pour la page de détail d'un produit */
+.produit-detail-container {
+    max-width: 1000px;
+    margin: 120px auto 40px;
+    padding: 0 20px; /* On retire le padding vertical pour que la carte prenne toute la place */
+}
+
+.produit-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.produit-image-container img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+}
+
+.produit-info-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* S'assure que le conteneur prend toute la hauteur de la grille */
+}
+
+.produit-info-container h1 {
+    font-size: 2.8rem;
+    color: #a75d67;
+    margin: 0 0 0.5rem;
+}
+
+.produit-info-container .prix {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4c3a4c;
+    margin-bottom: 1.5rem;
+}
+
+/* --- STYLES POUR LA DESCRIPTION --- */
+.produit-info-container .description-wrapper {
+    margin-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1.5rem;
+    flex-grow: 1; /* Pousse les boutons en bas */
+}
+
+.produit-info-container .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-height: 102px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.produit-info-container .description.expanded {
+    max-height: 1000px;
+}
+.produit-info-container .btn-see-more {
+    background: none;
+    border: none;
+    color: #d46a92;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    padding: 5px 0;
+}
+
+/* --- STYLES POUR LES BOUTONS D'ACTION EN BAS --- */
+.produit-info-container .actions-wrapper {
+    margin-top: auto; /* Pousse cette section tout en bas */
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.produit-info-container .stock-info {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.produit-info-container .stock-info.en-stock { color: #388e3c; }
+.produit-info-container .stock-info.hors-stock { color: #c62828; }
+
+.produit-info-container .actions-container {
+    display: flex;
+    gap: 0.75rem;
+    align-items: stretch; /* Les boutons auront la même hauteur */
+}
+
+.produit-info-container .add-to-cart-form {
+    flex-grow: 1;
+    display: flex;
+}
+
+.produit-info-container .btn-action {
+    font-family: 'Poppins',sans-serif;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    transition: all .3s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-sizing: border-box;
+}
+.produit-info-container .btn-add { background: #d46a92; color: white; }
+.produit-info-container .btn-add:hover { background: #a75d67; }
+.produit-info-container .btn-precommander { background: #ff9800; color: white; }
+.produit-info-container .btn-precommander:hover { background: #f57c00; }
+
+.produit-info-container .btn-like {
+    flex-shrink: 0;
+    width: 50px;
+    padding: 0;
+    border: 2px solid #d46a92;
+    background: #fff;
+    color: #d46a92;
+    font-size: 1.5rem;
+}
+.produit-info-container .btn-like.liked, .produit-info-container .btn-like:hover {
+    background: #d46a92;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .produit-detail-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,195 @@
+/* ============ PAGE PROFIL ============ */
+.profil-container {
+  max-width: 1100px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* --- Grille pour les 2 premières cartes --- */
+.profil-grid-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Responsive pour les écrans plus petits */
+@media (max-width: 992px) {
+  .profil-grid-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ CARTE DE FIDÉLITÉ ============ */
+.fidelite-card {
+  background: linear-gradient(135deg, #fadadd, #ffe4ec);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  color: #a75d67;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.fidelite-card h2 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.fidelite-card p {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+}
+
+.fidelite-card .points-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #d46a92;
+  margin: 0.5rem 0;
+  line-height: 1;
+  text-shadow: 2px 2px 5px rgba(212, 106, 146, 0.2);
+}
+
+.fidelite-card small {
+  color: #b19298;
+  font-size: 0.9rem;
+}
+
+/* ============ CARTE CODES FIDÉLITÉ ============ */
+.codes-fidelite-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.codes-fidelite-card h2 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  color: #a75d67;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.codes-fidelite-card p {
+  margin-top: 0;
+  color: #4c3a4c;
+  font-size: 1rem;
+}
+
+.codes-list {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.code-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffafc;
+  border: 2px dashed #ffe0e9;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+.code-item .code-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d46a92;
+  font-family: monospace;
+}
+
+.code-item .code-details {
+  font-size: 0.9rem;
+  color: #a75d67;
+}
+
+/* CARTES GÉNÉRIQUES (PROFIL, COMMANDES) */
+.profil-card,
+.commandes-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.profil-card h1, .commandes-card h2 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  color: #a75d67;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Formulaire de profil */
+.profil-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.profil-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4c3a4c;
+  font-size: 1rem;
+}
+
+.profil-form input[type="text"],
+.profil-form input[type="email"],
+.profil-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.profil-form input[type="email"] {
+  background-color: #f1f1f1;
+  cursor: not-allowed;
+}
+
+/* Section Commandes */
+.commande {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.commande-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #fffafc;
+  cursor: pointer;
+}
+
+.produit-commande {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.produit-commande:last-child {
+  border-bottom: none;
+}
+
+.produit-commande img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}

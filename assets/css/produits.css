@@ -1,0 +1,185 @@
+/* ============ STYLES SPÉCIFIQUES POUR LA PAGE PRODUITS.PHP ============ */
+
+/* Style pour la table des produits */
+.products-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.products-table .product-thumb-cell {
+    width: 80px;
+}
+
+.products-table .stock-cell {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Sections du formulaire d'ajout/modification */
+.admin-form-container .card-section {
+    background: #ffffff;
+    border: 1px solid #fdeef4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.admin-form-container .card-section:last-child {
+    margin-bottom: 0;
+}
+
+.admin-form-container .card-section h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #a75d67;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Formulaire d'upload d'image */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-form .file-input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-upload {
+    background-color: #a75d67;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-upload:hover {
+    background-color: #d46a92;
+}
+
+
+/* Galerie d'images pour la sélection */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.image-gallery .thumb {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.image-gallery .thumb:hover,
+.image-gallery .thumb.selected {
+    border-color: #d46a92;
+    background-color: #fff0f5;
+    box-shadow: 0 0 5px rgba(212, 106, 146, 0.5);
+}
+
+.image-gallery .thumb img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.image-gallery .thumb span {
+    font-size: 0.75rem;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+}
+
+/* Champ d'image readonly */
+input#imageInput[readonly] {
+    background-color: #e9ecef;
+    cursor: pointer;
+    color: #495057;
+}
+
+/* Filtres de recherche */
+.product-filters {
+    display: grid;
+    grid-template-columns: minmax(150px, 2fr) repeat(2, minmax(100px, 1fr)) auto auto; 
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.product-filters input,
+.product-filters select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-filters button {
+    background-color: #d46a92;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-filters button:hover {
+    background-color: #a75d67;
+}
+
+.btn-cancel-search {
+    background-color: #f1f1f1;
+    color: #555;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-cancel-search:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive pour les filtres */
+@media (max-width: 992px) {
+    .product-filters {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,117 @@
+/* ============ STYLES SPÉCIFIQUES POUR LA PAGE USERS.PHP ============ */
+
+/* Style pour la cellule des points de fidélité */
+.admin-table .points-cell {
+    vertical-align: middle;
+}
+
+/* Conteneur du formulaire de points pour un alignement parfait */
+.user-points-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Affichage des points (le nombre) */
+.user-points-form .points-display {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d46a92;
+  min-width: 35px;
+  text-align: center;
+}
+
+/* Champ de saisie pour ajouter/retirer des points */
+.user-points-form input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Boutons + et - */
+.user-points-form .btn-points {
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.user-points-form .btn-points:hover {
+    transform: scale(1.1);
+}
+
+.user-points-form .btn-points.add { background-color: #388e3c; }
+.user-points-form .btn-points.remove { background-color: #c62828; }
+
+/* Styles pour les checkboxes dans le formulaire de modification */
+.form-group .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* --- NOUVEAUX STYLES POUR LA RECHERCHE --- */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    background-color: #d46a92;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #a75d67;
+}
+
+.btn-cancel-search {
+    background-color: #f1f1f1;
+    color: #555;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel-search:hover {
+    background-color: #e0e0e0;
+}

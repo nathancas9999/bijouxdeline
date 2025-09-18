@@ -1,0 +1,114 @@
+/* ============ PAGE DE CONNEXION / INSCRIPTION ============ */
+.auth-container {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 40px;
+}
+
+.auth-card {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.auth-card h1 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 2.8rem;
+  color: #a75d67;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4c3a4c;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  border-color: #d46a92;
+  box-shadow: 0 0 0 3px rgba(212, 106, 146, 0.2);
+  outline: none;
+}
+
+.auth-button {
+  background-color: #d46a92;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.auth-button:hover {
+  background-color: #a75d67;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 106, 146, 0.3);
+}
+
+.auth-switch-link {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.auth-switch-link a {
+  color: #d46a92;
+  font-weight: bold;
+  text-decoration: none;
+}
+.auth-switch-link a:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  background-color: #ffcdd2;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+  .auth-card h1 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,201 @@
+/* ============ PAGE PANIER ============ */
+.panier-container {
+  max-width: 1100px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+}
+
+.panier-header h1 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 3rem;
+  color: #a75d67;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grille principale (produits à gauche, récap à droite) */
+.panier-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* --- COLONNE DE GAUCHE : LISTE DES PRODUITS --- */
+.panier-items {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.panier-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.panier-item:first-child { padding-top: 0; }
+.panier-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.panier-item-img img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.panier-item-details { flex-grow: 1; }
+.panier-item-details h4 { margin: 0 0 0.5rem; font-size: 1.2rem; color: #4c3a4c; }
+.panier-item-details p { margin: 0; color: #888; }
+
+.panier-item-qte form { display: flex; align-items: center; gap: 0.75rem; }
+.panier-item-qte button {
+  background-color: #d46a92;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.panier-item-qte button:hover { background-color: #a75d67; }
+.panier-item-qte span { font-weight: bold; font-size: 1.1rem; }
+
+.panier-item-total { font-size: 1.2rem; font-weight: bold; color: #a75d67; min-width: 80px; text-align: right; }
+.btn-remove-item { margin-top: 0.5rem; background: none; border: none; color: #aaa; cursor: pointer; font-size: 0.9rem; }
+.btn-remove-item:hover { color: #d46a92; }
+
+/* --- COLONNE DE DROITE : RÉCAPITULATIF --- */
+.panier-recap {
+  background: #fffafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #fdeef4;
+  position: sticky;
+  top: 120px;
+}
+
+.panier-recap h3 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 1.8rem;
+  color: #a75d67;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #fdeef4;
+  padding-bottom: 1rem;
+}
+
+.promo-form { display: flex; gap: 10px; margin-bottom: 1rem; }
+.promo-form input { flex-grow: 1; padding: 10px 15px; border: 1px solid #ddd; border-radius: 20px; }
+.promo-form button { background-color: #d46a92; color: white; padding: 10px 15px; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; }
+.message-promo { text-align: center; padding: 10px; border-radius: 5px; margin-top: 1rem; font-size: 0.9rem; }
+.message-promo.success { background-color: #e8f5e9; color: #388e3c; }
+.message-promo.error { background-color: #ffcdd2; color: #c62828; }
+
+.total-summary { font-size: 1rem; color: #4c3a4c; }
+.total-summary div { display: flex; justify-content: space-between; padding: 0.75rem 0; }
+.total-summary .reduction { color: #388e3c; }
+.total-summary .total-final {
+  border-top: 1px solid #fdeef4;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a75d67;
+}
+
+.btn-valider {
+  display: block;
+  background-color: #d46a92;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5rem;
+  border: 2px solid #d46a92;
+  transition: all 0.3s;
+}
+.btn-valider:hover { background-color: #a75d67; border-color: #a75d67; }
+
+/* PANIER VIDE */
+.panier-vide {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fffafc;
+  border-radius: 12px;
+}
+.panier-vide p { font-size: 1.2rem; color: #888; }
+.btn-decouvrir {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background: #d46a92;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Bouton pour supprimer le code promo --- */
+.total-summary .reduction {
+  align-items: center; /* Aligne le texte et le bouton sur la même ligne */
+}
+
+.reduction-amount {
+  display: flex;       /* Utilise flexbox pour aligner le montant et l'icône */
+  align-items: center;
+  gap: 0.75rem;      /* Espace entre le montant et l'icône */
+}
+
+.btn-remove-promo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff0f5;
+  color: #d46a92;
+  border: 1px solid #ffe0e9;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-remove-promo:hover {
+  background-color: #d46a92;
+  color: white;
+  transform: scale(1.1);
+}
+
+.btn-remove-promo i {
+  font-size: 0.9rem; /* Taille de l'icône poubelle */
+}
+
+
+.precommande-tag {
+    color: #ff9800;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-remove-promo i {
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .panier-grid { grid-template-columns: 1fr; }
+  .panier-recap { position: static; top: auto; }
+}
+
+@media (max-width: 576px) {
+  .panier-item { flex-wrap: wrap; }
+  .panier-item-img { flex-basis: 100%; text-align: center; }
+  .panier-item-total { text-align: left; }
+}

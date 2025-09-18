@@ -1,0 +1,41 @@
+/* ============ STYLES SPÉCIFIQUES POUR LA PAGE PROMOS.PHP ============ */
+
+/* Style pour la colonne "Utilisation" pour la rendre plus lisible */
+.admin-table td:nth-child(4) {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style pour la colonne "Client" pour mettre en évidence les codes de fidélité */
+.admin-table td:nth-child(2) em {
+    color: #d46a92;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Style pour le formulaire d'ajout/modification */
+.admin-form-container .form-group input[type="number"],
+.admin-form-container .form-group input[type="date"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.btn-cancel {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 1rem;
+    color: #a75d67;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    background: #fffafc;
+    border: 1px solid #fdeef4;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Assure que le padding ne casse pas la largeur */
+}
+
+.btn-cancel:hover {
+    background-color: #fff0f5;
+}

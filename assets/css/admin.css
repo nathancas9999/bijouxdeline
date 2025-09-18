@@ -1,0 +1,388 @@
+/* ============ STYLE GÉNÉRAL ADMIN ============ */
+.admin-container {
+  max-width: 1200px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+}
+
+.admin-container h1 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 3rem;
+  color: #a75d67;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grille principale (table à gauche, formulaire à droite) */
+.admin-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* --- TABLEAU GÉNÉRAL --- */
+.table-container {
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+.table-container h3 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 1.8rem;
+  color: #a75d67;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.admin-table th {
+  background-color: #fff0f5;
+  color: #a75d67;
+  font-weight: 600;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+.status-badge.active { background-color: #388e3c; }
+.status-badge.inactive { background-color: #c62828; }
+
+.actions a {
+  color: #a75d67;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+.actions a:hover { color: #d46a92; }
+
+/* --- FORMULAIRE D'AJOUT/MODIFICATION (CÔTÉ DROIT) --- */
+.admin-form-container {
+  background: #fffafc;
+  border: 1px solid #fdeef4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 120px;
+}
+
+.admin-form-container h2 {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 2.2rem;
+  color: #a75d67;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.admin-form .form-group { margin-bottom: 1rem; }
+.admin-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4c3a4c;
+}
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.admin-form textarea { resize: vertical; min-height: 80px; }
+
+
+.btn-submit {
+  width: 100%;
+  background-color: #d46a92;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1.5rem;
+}
+.btn-submit:hover { background-color: #a75d67; }
+
+.btn-cancel {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #a75d67;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-cancel:hover {
+    color: #d46a92;
+}
+
+/* Message Banners (success/error) */
+.message-banner {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.message-banner.success {
+    background-color: #e8f5e9; /* Vert très clair */
+    color: #388e3c; /* Vert foncé */
+    border: 1px solid #a5d6a7;
+}
+.message-banner.error {
+    background-color: #ffebee; /* Rouge très clair */
+    color: #c62828; /* Rouge foncé */
+    border: 1px solid #ef9a9a;
+}
+.message-banner strong {
+    color: inherit; /* Pour que le strong utilise la couleur du message */
+}
+
+/* Bouton retour dashboard */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-back-dashboard {
+    background-color: #a75d67;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-back-dashboard:hover {
+    background-color: #d46a92;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-form-container { position: static; top: auto; }
+}
+
+
+/* ============ STYLES SPÉCIFIQUES POUR LA PAGE USERS.PHP ============ */
+
+/* Centrage vertical de la cellule des points */
+.admin-table .points-cell {
+    vertical-align: middle;
+}
+
+/* Conteneur du formulaire de points pour alignement */
+.user-points-form {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Affichage des points */
+.user-points-form .points-display {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d46a92;
+  min-width: 35px; /* Espace minimal pour les chiffres */
+  text-align: center;
+}
+
+/* Champ de saisie des points */
+.user-points-form input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Boutons + et - */
+.user-points-form .btn-points {
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.user-points-form .btn-points.add { background-color: #388e3c; }
+.user-points-form .btn-points.remove { background-color: #c62828; }
+
+/* Styles pour les checkboxes dans le formulaire de modification */
+.form-group .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+
+/* ============ STYLES SPÉCIFIQUES POUR LA PAGE PRODUITS.PHP ============ */
+
+.products-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.products-table .product-thumb-cell {
+    width: 80px; /* Taille fixe pour l'image */
+    padding-right: 0.5rem;
+}
+
+.products-table .stock-cell {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Sections du formulaire d'ajout */
+.admin-form-container .card-section {
+    background: #ffffff;
+    border: 1px solid #fdeef4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem; /* Espace entre les sections */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.admin-form-container .card-section:last-child {
+    margin-bottom: 0;
+}
+
+.admin-form-container .card-section h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #a75d67;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Formulaire d'upload */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments */
+    gap: 1rem;
+}
+
+.upload-form .file-input {
+    width: calc(100% - 2rem); /* Ajuste la largeur */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.btn-upload {
+    background-color: #a75d67;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-upload:hover {
+    background-color: #d46a92;
+}
+
+
+/* Galerie d'images */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* 4 images par ligne sur ~300px */
+    gap: 1rem;
+    max-height: 250px; /* Limite la hauteur pour éviter un défilement excessif */
+    overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+    padding: 0.5rem; /* Pour l'esthétique du défilement */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.image-gallery .thumb {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.image-gallery .thumb:hover,
+.image-gallery .thumb.selected {
+    border-color: #d46a92;
+    background-color: #fff0f5;
+    box-shadow: 0 0 5px rgba(212, 106, 146, 0.5);
+}
+
+.image-gallery .thumb img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.image-gallery .thumb span {
+    font-size: 0.75rem;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+}
+
+/* Champ d'image readonly */
+input#imageInput {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
